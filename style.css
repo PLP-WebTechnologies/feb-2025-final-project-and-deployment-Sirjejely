@@ -1,0 +1,512 @@
+/* Reset & Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8fafc;
+  color: #2c3e50;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: #1b4d3e;
+}
+
+/* Header & Navbar */
+header, .navbar {
+  background: #1b4d3e;
+  color: white;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #aeb6bf;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  background-color: #26a69a;
+  color: #fff;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 2rem;
+  background: #fff5e1;
+}
+
+.hero-text {
+  flex: 1 1 300px;
+  animation: slideIn 1s ease-out;
+}
+
+.hero-text h2 {
+  font-size: 2.5rem;
+  color: #1b4d3e;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-button {
+  background: #fca311;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.cta-button:hover {
+  background: #ff9f1c;
+}
+
+.hero-image img {
+  max-width: 100%;
+  border-radius: 10px;
+  animation: fadeIn 10s ease-in-out;
+}
+
+/* Features Grid */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  background: #f0f0f0;
+}
+
+.feature-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Footer */
+footer {
+  background-color: #2c3e50;
+  color: #aeb6bf;
+  text-align: center;
+  padding: 1rem 2rem;
+  font-size: 0.9rem;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.15);
+  margin-top: auto;
+}
+
+/* Animations */
+@keyframes slideIn {
+  from { transform: translateX(-50px); opacity: 0; }
+  to   { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* Main Content */
+main {
+  flex-grow: 1;
+  max-width: 900px;
+  margin: 2rem auto;
+  background: #fff;
+  border-radius: 12px;
+  padding: 2.5rem 3rem;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* Headings */
+h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #00796b;
+  border-bottom: 3px solid #00796b;
+  margin-bottom: 1.8rem;
+  padding-bottom: 0.3rem;
+}
+
+/* Forms */
+.sales-form label {
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+  color: #34495e;
+  display: block;
+}
+
+.sales-form input[type="text"],
+.sales-form input[type="number"] {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #b0bec5;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.sales-form input:focus {
+  border-color: #26a69a;
+  box-shadow: 0 0 8px #26a69a66;
+  outline: none;
+}
+
+.sales-form button {
+  background-color: #26a69a;
+  color: white;
+  padding: 0.9rem 2.2rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.sales-form button:hover {
+  background-color: #1e7969;
+}
+
+/* Tables */
+.sales-table table,
+.summary-table table,
+.record-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+}
+
+.sales-table thead th,
+.summary-table th,
+.record-table th {
+  background-color: #26a69a;
+  color: white;
+  font-weight: 700;
+  padding: 12px;
+  text-align: center;
+}
+
+.sales-table tbody tr,
+.record-table tr {
+  background: #e0f2f1;
+  transition: background 0.3s;
+}
+
+.sales-table tbody tr:hover,
+.record-table tr:hover {
+  background-color: #b2dfdb;
+}
+
+.sales-table td,
+.summary-table td,
+.record-table td {
+  padding: 12px;
+  text-align: center;
+  color: #004d40;
+  font-weight: 600;
+}
+
+.summary-table th {
+  background-color: #f05a28;
+}
+
+.summary-table tfoot th {
+  background: #333;
+  color: #fff;
+}
+
+/* Record Form */
+.record-form {
+  background: #fff;
+  border-radius: 8px;
+  padding: 2rem;
+  max-width: 700px;
+  margin: 2rem auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.record-form h2 {
+  color: #f05a28;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.record-form form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.record-form label {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+}
+
+.record-form input {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.record-form button {
+  flex: 1 1 100%;
+  padding: 0.75rem;
+  background: #f05a28;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+.record-form button:hover {
+  background: #d0481d;
+}
+
+/* Export Buttons */
+.export-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin: 2rem;
+}
+
+/* Chart Section */
+.summary-chart {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  padding: 1rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.summary-chart h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Buttons */
+button {
+  background: #00796b;
+  color: #fff;
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.15rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  display: block;
+  margin: 2.5rem auto 0;
+}
+
+button:hover {
+  background: #004d40;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text h2 {
+    font-size: 2rem;
+  }
+
+  .cta-button {
+    width: 100%;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+    padding: 0.35rem 0.7rem;
+  }
+
+  main {
+    padding: 2rem 1.5rem;
+  }
+
+  .sales-table table {
+    overflow-x: auto;
+    display: block;
+    white-space: nowrap;
+  }
+
+  .record-form label {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  nav a {
+    font-size: 0.85rem;
+  }
+}
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 0;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #004080;
+  color: white;
+  padding: 15px 30px;
+}
+
+.navbar h1 {
+  font-size: 24px;
+}
+
+.navbar nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.navbar nav a.active {
+  border-bottom: 2px solid #fff;
+}
+
+/* Contact Container */
+.contact-container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h2 {
+  margin-bottom: 20px;
+  color: #004080;
+}
+
+.contact-info p {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+form input,
+form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+form button {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #004080;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+form button:hover {
+  background-color: #003366;
+}
+
+/* WhatsApp Link */
+.whatsapp-link {
+  margin-top: 30px;
+  font-size: 16px;
+}
+
+.whatsapp-link a {
+  color: #25d366;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #004080;
+  color: white;
+  margin-top: 50px;
+}

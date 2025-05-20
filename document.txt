@@ -1,0 +1,46 @@
+# ChoQuann Business Analysis Web App
+
+## Overview
+This is a business analysis web application for ChoQuann Enterprises. It includes multiple pages such as Home, About, Sales, Summary, Inventory, and Contact. The app is designed to help users navigate business information easily.
+
+## Objective
+This project was built following the lecturer’s specifications, aiming to demonstrate:
+- Multi-page web navigation
+- Responsive design and clean layout
+- Contact form with mail functionality
+- Integration of basic JavaScript for interactivity
+
+## Features
+- 📄 **Multi-Page Layout** – Six navigable sections: Home, About, Sales, Summary, Inventory, and Contact.
+- 📧 **Contact Form** – Uses `mailto:` for sending emails directly via the user's email client.
+- 💬 **WhatsApp Integration** – Direct link to WhatsApp chat.
+- 💡 **JavaScript Features** – (Planned or added):
+  - Basic client-side form validation (optional)
+  - Smooth scrolling or button interaction
+  - Dynamic highlights or menu responsiveness
+
+## Technologies Used
+- **HTML5** – Structure and content
+- **CSS3** – Styling and layout
+- **JavaScript** – Basic interactivity and enhancements
+
+## How to Use
+1. Clone or download the project files.
+2. Open `index.html` in a browser to start navigating.
+3. Use the navigation bar to explore different pages.
+4. On the Contact page, fill the form to send a message via email or start a WhatsApp chat.
+
+## File Structure
+project-folder/
+│
+├── index.html
+├── about.html
+├── sales.html
+├── summary.html
+├── record.html
+├── contact.html
+├── style.css
+└── script.js 
+
+The site was deployed with Github pages and can be viewd on
+https://plp-webtechnologies.github.io/feb-2025-final-project-and-deployment-Sirjejely/ 
